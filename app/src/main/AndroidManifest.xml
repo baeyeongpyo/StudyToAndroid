@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".JAVA_Study.JAVAMainActivity" />
         <activity android:name=".KOTLIN_Study.KOTLINMainActivity" />
-        <activity android:name=".JAVA_Study.Study_ExpandableListView.Example_ExpandableListViewActivity"></activity>
+        <activity android:name=".KOTLIN_Study.text_Study.Linkfity_study"/>
+
     </application>
 
 </manifest>

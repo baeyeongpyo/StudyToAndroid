@@ -1,5 +1,6 @@
 package com.example.yeongpyo.studytoandroid
 
+import com.example.yeongpyo.studytoandroid.KOTLIN_Study.text_Study.Linkfity_study
 import org.junit.Test
 
 /**
@@ -9,14 +10,13 @@ class ExampleUnitTest_Kotlin  {
     @Test
     fun addition_isCorrect() {
 
-        var map : HashMap<String, Int> = HashMap()
-        map.put("a",1)
-        map.put("b",2)
-        map.put("c",3)
+        var category_1 : HashMap<String , String> = HashMap()
+        category_1.put("Linkify", "test")
 
-        var  arr : ArrayList<String> = ArrayList(map.keys)
+        var totalCategory : HashMap<String, String> = HashMap()
+        totalCategory.putAll(category_1)
 
-        println(arr.toString())
+        print(totalCategory.get("Linkify"))
 
 
     }
