@@ -19,17 +19,12 @@ class Clip_StudyActivity : AppCompatActivity() {
         var Clipdata : ClipData = ClipData.newPlainText("TEST CLIIP BOARD", "TEST MESSAGE")
         clipboard_manager.primaryClip = Clipdata
 
-        findViewById<EditText>(R.id.input1)
-        findViewById<EditText>(R.id.input2)
-
         findViewById<Button>(R.id.input_Button1).setOnClickListener { view ->
             findViewById<EditText>(R.id.input1).let {
                 clipboard_manager.primaryClip = ClipData.newPlainText("Test Clipboard", it.text)
             } }
-        findViewById<Button>(R.id.input_Button2).let {
-            it.text = clipboard_manager.primaryClip.toString()
+        findViewById<Button>(R.id.input_Button2).setOnClickListener() {view ->
+            findViewById<EditText>(R.id.input2).let { it.setText(clipboard_manager.primaryClip.toString())  }
         }
-
-
     }
 }
