@@ -7,6 +7,7 @@ import android.widget.ExpandableListView
 import android.widget.TextView
 import android.widget.Toast
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.ClipBoardManager.Clip_StudyActivity
+import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.Material_Box
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.text_Study.Linkfity_study
 import com.example.yeongpyo.studytoandroid.R
 import java.util.*
@@ -22,10 +23,18 @@ class KOTLINMainActivity : AppCompatActivity() {
         category_1.put("Linkify", Linkfity_study::class.java)
         category_1.put("ClipBoard", Clip_StudyActivity::class.java)
 
-        var totalCategory = totalMap(category_1)
+        var category_2 :  HashMap<String, Class<*>> = HashMap()
+        category_2.put("Material Box", Material_Box::class.java)
+
+        var totalCategory : HashMap<String, Class<*>> = HashMap()
+        totalCategory.apply {
+            putAll(category_1)
+            putAll(category_2)
+        }
 
         var map = LinkedHashMap<String, ArrayList<String>>()
         map.put("text_Study" , ArrayList(category_1.keys))
+        map.put("Material Design" , ArrayList(category_2.keys))
 
         var elv_list : ExpandableListView = findViewById(R.id.main_elv_listview)
         elv_list.setAdapter(KOTLINMain_adapter(map))

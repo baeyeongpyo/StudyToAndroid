@@ -19,7 +19,8 @@
         <activity android:name=".JAVA_Study.JAVAMainActivity" />
         <activity android:name=".KOTLIN_Study.KOTLINMainActivity" />
         <activity android:name=".KOTLIN_Study.text_Study.Linkfity_study" />
-        <activity android:name=".KOTLIN_Study.ClipBoardManager.Clip_StudyActivity"></activity>
+        <activity android:name=".KOTLIN_Study.ClipBoardManager.Clip_StudyActivity" />
+        <activity android:name=".KOTLIN_Study.Material_Design.Material_Box"></activity>
     </application>
 
 </manifest>
