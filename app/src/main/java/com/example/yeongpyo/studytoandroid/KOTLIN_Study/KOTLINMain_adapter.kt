@@ -18,21 +18,21 @@ class KOTLINMain_adapter(var map : LinkedHashMap<String, ArrayList<String>>):Bas
 
     init { for (txt in map.keys) arr.add(txt) }
 
-    override fun getGroup(p0: Int): Any { return p0}
+    override fun getGroup(p0: Int): Any = p0
 
-    override fun isChildSelectable(p0: Int, p1: Int): Boolean { return true }
+    override fun isChildSelectable(p0: Int, p1: Int): Boolean = true
 
-    override fun hasStableIds(): Boolean { return true }
+    override fun hasStableIds(): Boolean = true
 
-    override fun getChildId(p0: Int, p1: Int): Long { return p1.toLong() }
+    override fun getChildId(p0: Int, p1: Int): Long = p1.toLong()
 
-    override fun getGroupCount(): Int { return map.size }
+    override fun getGroupCount(): Int = map.size
 
-    override fun getChildrenCount(p0: Int): Int { return map.get(arr.get(p0))!!.size }
+    override fun getChildrenCount(p0: Int): Int = map.get(arr.get(p0))!!.size
 
-    override fun getChild(p0: Int, p1: Int): Any { return p1 }
+    override fun getChild(p0: Int, p1: Int): Any = p1
 
-    override fun getGroupId(p0: Int): Long { return p0.toLong() }
+    override fun getGroupId(p0: Int): Long = p0.toLong()
 
     override fun getGroupView(p0: Int, p1: Boolean, p2: View?, p3: ViewGroup?): View {
         var v : View = LayoutInflater.from(p3!!.context).inflate(R.layout.childlayout, p3, false)

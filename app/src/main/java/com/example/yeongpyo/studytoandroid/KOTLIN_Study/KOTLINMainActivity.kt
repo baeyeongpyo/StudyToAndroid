@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.ClipBoardManager.Clip_StudyActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.Material_Box
+import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.coordinatorActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.text_Study.Linkfity_study
 import com.example.yeongpyo.studytoandroid.R
 import java.util.*
@@ -25,6 +26,7 @@ class KOTLINMainActivity : AppCompatActivity() {
 
         var category_2 :  HashMap<String, Class<*>> = HashMap()
         category_2.put("Material Box", Material_Box::class.java)
+        category_2.put("Coordinator Layout", coordinatorActivity::class.java)
 
         var totalCategory : HashMap<String, Class<*>> = HashMap()
         totalCategory.apply {
