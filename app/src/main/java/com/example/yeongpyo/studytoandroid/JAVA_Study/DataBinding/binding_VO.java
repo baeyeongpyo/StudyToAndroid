@@ -10,7 +10,4 @@ public class binding_VO {
         return bindingString;
     }
 
-    public void setBindingString(String bindingString) {
-        this.bindingString.set( bindingString );
-    }
 }

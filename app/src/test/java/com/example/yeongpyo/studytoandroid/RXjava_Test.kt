@@ -64,8 +64,6 @@ class RXjava_Test {
                 .subscribe()
         println(generated)
 
-        Retrofit.Builder()
-        print(Flowable.fromCallable { return@fromCallable "aaaaa" }.toString())
 
 
 

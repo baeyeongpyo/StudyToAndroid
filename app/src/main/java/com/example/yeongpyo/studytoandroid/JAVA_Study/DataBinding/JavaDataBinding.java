@@ -17,6 +17,7 @@ public class JavaDataBinding extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java_data_binding);
         ActivityJavaDataBindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_java_data_binding);
+        bindingString.bindingString.set("a b c");
         binding.setBindString(bindingString);
 
         findViewById(R.id.inputButton).setOnClickListener(view -> {
