@@ -3,6 +3,7 @@ package com.example.yeongpyo.studytoandroid.KOTLIN_Study.text_Study
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.databinding.DataBindingUtil
 import android.graphics.Canvas
 import android.graphics.Color
 import android.os.Build
@@ -39,6 +40,7 @@ class Linkfity_study : AppCompatActivity() {
 
         Linkify.addLinks(textview, pattern1, "http://www.naver.com", null, mfilter)
         Linkify.addLinks(textview, pattern2, "http://www.google.com", null, mfilter)
+
 
     }
 }

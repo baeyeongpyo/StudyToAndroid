@@ -20,16 +20,18 @@ class KOTLINMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_main)
 
-        var category_1 : HashMap<String , Class<*>> = HashMap()
-        category_1.put("Linkify", Linkfity_study::class.java)
-        category_1.put("ClipBoard", Clip_StudyActivity::class.java)
+        var category_1 : HashMap<String , Class<*>> = HashMap<String , Class<*>>().apply {
+            put("Linkify", Linkfity_study::class.java)
+            put("ClipBoard", Clip_StudyActivity::class.java)
+        }
 
-        var category_2 :  HashMap<String, Class<*>> = HashMap()
-        category_2.put("Material Box", Material_Box::class.java)
-        category_2.put("Coordinator Layout", coordinatorActivity::class.java)
 
-        var totalCategory : HashMap<String, Class<*>> = HashMap()
-        totalCategory.apply {
+        var category_2 :  HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
+            put("Material Box", Material_Box::class.java)
+            put("Coordinator Layout", coordinatorActivity::class.java)
+        }
+
+        var totalCategory : HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
             putAll(category_1)
             putAll(category_2)
         }

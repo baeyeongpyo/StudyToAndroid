@@ -1,5 +1,6 @@
 package com.example.yeongpyo.studytoandroid
 
+import io.reactivex.Flowable
 import io.reactivex.Observable
 import io.reactivex.ObservableOnSubscribe
 import io.reactivex.rxkotlin.subscribeBy
@@ -7,6 +8,7 @@ import io.reactivex.rxkotlin.toFlowable
 import io.reactivex.rxkotlin.toObservable
 import org.junit.Test
 import java.util.*
+import java.util.concurrent.Callable
 import java.util.concurrent.atomic.AtomicInteger
 
 class RXjava_Test {
@@ -61,6 +63,11 @@ class RXjava_Test {
                 .toList()
                 .subscribe()
         println(generated)
+
+        Retrofit.Builder()
+        print(Flowable.fromCallable { return@fromCallable "aaaaa" }.toString())
+
+
 
 
 /*
