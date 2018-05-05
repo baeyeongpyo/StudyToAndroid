@@ -9,6 +9,7 @@ import android.widget.Toast
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.ClipBoardManager.Clip_StudyActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.Material_Box
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.coordinatorActivity
+import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Rxtest.RXjava2Kotlin_Testing
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.text_Study.Linkfity_study
 import com.example.yeongpyo.studytoandroid.R
 import java.util.*
@@ -20,25 +21,31 @@ class KOTLINMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_main)
 
-        var category_1 : HashMap<String , Class<*>> = HashMap<String , Class<*>>().apply {
+        val category_1 : HashMap<String , Class<*>> = HashMap<String , Class<*>>().apply {
             put("Linkify", Linkfity_study::class.java)
             put("ClipBoard", Clip_StudyActivity::class.java)
         }
 
 
-        var category_2 :  HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
+        val category_2 :  HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
             put("Material Box", Material_Box::class.java)
             put("Coordinator Layout", coordinatorActivity::class.java)
+        }
+
+        val category_3 : HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
+            put("Rx java Test ( Rx API )", RXjava2Kotlin_Testing::class.java)
         }
 
         var totalCategory : HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
             putAll(category_1)
             putAll(category_2)
+            putAll(category_3)
         }
 
         var map = LinkedHashMap<String, ArrayList<String>>()
         map.put("text_Study" , ArrayList(category_1.keys))
         map.put("Material Design" , ArrayList(category_2.keys))
+        map.put("ReactX" , ArrayList(category_3.keys))
 
         var elv_list : ExpandableListView = findViewById(R.id.main_elv_listview)
         elv_list.setAdapter(KOTLINMain_adapter(map))
