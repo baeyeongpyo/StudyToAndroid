@@ -24,7 +24,8 @@
         <activity android:name=".KOTLIN_Study.DataBinding.DataBindingActivity" />
         <activity android:name=".KOTLIN_Study.Material_Design.coordinatorActivity" />
         <activity android:name=".JAVA_Study.DataBinding.JavaDataBinding" />
-        <activity android:name=".KOTLIN_Study.Rxtest.RXjava2Kotlin_Testing"></activity>
+        <activity android:name=".KOTLIN_Study.Rxtest.RXjava2Kotlin_Testing" />
+        <activity android:name=".KOTLIN_Study.Material_Design.BottomBehaviorActivity"></activity>
     </application>
 
 </manifest>

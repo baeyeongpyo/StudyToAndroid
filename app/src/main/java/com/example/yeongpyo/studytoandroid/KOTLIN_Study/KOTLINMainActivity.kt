@@ -7,6 +7,7 @@ import android.widget.ExpandableListView
 import android.widget.TextView
 import android.widget.Toast
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.ClipBoardManager.Clip_StudyActivity
+import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.BottomBehaviorActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.Material_Box
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.coordinatorActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Rxtest.RXjava2Kotlin_Testing
@@ -30,6 +31,7 @@ class KOTLINMainActivity : AppCompatActivity() {
         val category_2 :  HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
             put("Material Box", Material_Box::class.java)
             put("Coordinator Layout", coordinatorActivity::class.java)
+            put("BottomBehaviorActivity", BottomBehaviorActivity::class.java)
         }
 
         val category_3 : HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
@@ -49,7 +51,7 @@ class KOTLINMainActivity : AppCompatActivity() {
 
         var elv_list : ExpandableListView = findViewById(R.id.main_elv_listview)
         elv_list.setAdapter(KOTLINMain_adapter(map))
-        elv_list.setOnChildClickListener({expandableListView, view, i1, i2, l ->
+       elv_list.setOnChildClickListener({expandableListView, view, i1, i2, l ->
             var EnterClass = view.findViewById<TextView>(R.id.childTextview).text
             startActivity(Intent(applicationContext, totalCategory.get(EnterClass)))
             true})

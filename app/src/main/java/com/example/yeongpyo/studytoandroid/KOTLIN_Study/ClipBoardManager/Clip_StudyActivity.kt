@@ -3,10 +3,10 @@ package com.example.yeongpyo.studytoandroid.KOTLIN_Study.ClipBoardManager
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.support.v7.app.AppCompatActivity
 import com.example.yeongpyo.studytoandroid.R
 
 class Clip_StudyActivity : AppCompatActivity() {
