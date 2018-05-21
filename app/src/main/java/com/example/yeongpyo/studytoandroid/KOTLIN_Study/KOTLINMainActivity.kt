@@ -7,6 +7,7 @@ import android.widget.ExpandableListView
 import android.widget.TextView
 import android.widget.Toast
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.ClipBoardManager.Clip_StudyActivity
+import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Kotlin_lib.Kotlin_lib_Prograss
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.BottomBehaviorActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.Material_Box
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.coordinatorActivity
@@ -22,32 +23,37 @@ class KOTLINMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_main)
 
-        val category_1 : HashMap<String , Class<*>> = HashMap<String , Class<*>>().apply {
+        val category_1  = HashMap<String , Class<*>>().apply {
             put("Linkify", Linkfity_study::class.java)
             put("ClipBoard", Clip_StudyActivity::class.java)
         }
 
 
-        val category_2 :  HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
+        val category_2  = HashMap<String, Class<*>>().apply {
             put("Material Box", Material_Box::class.java)
             put("Coordinator Layout", coordinatorActivity::class.java)
             put("BottomBehaviorActivity", BottomBehaviorActivity::class.java)
         }
 
-        val category_3 : HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
+        val category_3 = HashMap<String, Class<*>>().apply {
             put("Rx java Test ( Rx API )", RXjava2Kotlin_Testing::class.java)
         }
 
-        var totalCategory : HashMap<String, Class<*>> = HashMap<String, Class<*>>().apply {
+        val category_4 = HashMap<String, Class<*>>().apply {
+            put(" Kotlin Lib Prograss", Kotlin_lib_Prograss::class.java)
+        }
+        var totalCategory  = HashMap<String, Class<*>>().apply {
             putAll(category_1)
             putAll(category_2)
             putAll(category_3)
+            putAll(category_4)
         }
 
         var map = LinkedHashMap<String, ArrayList<String>>()
         map.put("text_Study" , ArrayList(category_1.keys))
         map.put("Material Design" , ArrayList(category_2.keys))
         map.put("ReactX" , ArrayList(category_3.keys))
+        map.put("Kotlin Lib" , ArrayList(category_4.keys))
 
         var elv_list : ExpandableListView = findViewById(R.id.main_elv_listview)
         elv_list.setAdapter(KOTLINMain_adapter(map))
