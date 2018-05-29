@@ -8,6 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.ClipBoardManager.Clip_StudyActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Kotlin_lib.Kotlin_lib_Prograss
+import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Kotlin_lib.LotteLibActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.BottomBehaviorActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.Material_Box
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.coordinatorActivity
@@ -41,6 +42,7 @@ class KOTLINMainActivity : AppCompatActivity() {
 
         val category_4 = HashMap<String, Class<*>>().apply {
             put(" Kotlin Lib Prograss", Kotlin_lib_Prograss::class.java)
+            put(" Lottie Lib", LotteLibActivity::class.java)
         }
         var totalCategory  = HashMap<String, Class<*>>().apply {
             putAll(category_1)

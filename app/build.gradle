@@ -28,6 +28,7 @@ android {
     }
     buildToolsVersion '28.0.0 rc1'
     dataBinding.enabled true
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 //kotlin.experimental.coroutines 'enable'
 
@@ -53,4 +54,5 @@ dependencies {
     implementation 'com.pawegio.kandroid:kandroid:0.8.7@aar'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21"
     implementation 'nl.komponents.progress:progress:1.0.3'
+    implementation 'com.airbnb.android:lottie:2.5.4'
 }
