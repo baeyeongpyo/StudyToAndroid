@@ -27,7 +27,8 @@
         <activity android:name=".KOTLIN_Study.Rxtest.RXjava2Kotlin_Testing" />
         <activity android:name=".KOTLIN_Study.Material_Design.BottomBehaviorActivity" />
         <activity android:name=".KOTLIN_Study.Kotlin_lib.Kotlin_lib_Prograss" />
-        <activity android:name=".KOTLIN_Study.Kotlin_lib.LotteLibActivity"></activity>
+        <activity android:name=".KOTLIN_Study.Kotlin_lib.LotteLibActivity" />
+        <activity android:name=".KOTLIN_Study.Material_Design.animationViewTestActivity"></activity>
     </application>
 
 </manifest>

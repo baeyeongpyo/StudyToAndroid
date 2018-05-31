@@ -14,8 +14,6 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
-
-
     buildTypes {
         release {
             minifyEnabled false
@@ -55,4 +53,6 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21"
     implementation 'nl.komponents.progress:progress:1.0.3'
     implementation 'com.airbnb.android:lottie:2.5.4'
+    testImplementation 'org.json:json:20140107'
+    implementation "com.andkulikov:transitionseverywhere:1.7.9"
 }

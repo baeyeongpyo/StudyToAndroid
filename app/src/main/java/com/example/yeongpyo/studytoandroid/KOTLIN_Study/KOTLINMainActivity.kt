@@ -11,6 +11,7 @@ import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Kotlin_lib.Kotlin_lib_Pr
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Kotlin_lib.LotteLibActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.BottomBehaviorActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.Material_Box
+import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.animationViewTestActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Material_Design.coordinatorActivity
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.Rxtest.RXjava2Kotlin_Testing
 import com.example.yeongpyo.studytoandroid.KOTLIN_Study.text_Study.Linkfity_study
@@ -43,6 +44,7 @@ class KOTLINMainActivity : AppCompatActivity() {
         val category_4 = HashMap<String, Class<*>>().apply {
             put(" Kotlin Lib Prograss", Kotlin_lib_Prograss::class.java)
             put(" Lottie Lib", LotteLibActivity::class.java)
+            put(" animationViewTestActivity", animationViewTestActivity::class.java)
         }
         var totalCategory  = HashMap<String, Class<*>>().apply {
             putAll(category_1)
